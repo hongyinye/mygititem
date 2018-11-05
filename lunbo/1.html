@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/1.css">
+	<!-- <script type="text/javascript">
+	window.onload = function(){
+        var oplay = document.getElementById('play');
+		var owrap = document.getElementById('wrap');
+	    var prevbtn = document.getElementById('prev');
+	    var nextbtn = document.getElementById('next');
+	   
+	    var caol = document.getElementById('small');
+	    var caoli = caol.getElementsByTagName('li');
+
+	    var caul = document.getElementById('big');  
+	    var cali =caul.getElementsByTagName('li');
+
+	    //右边图片循环点击事件
+	    for (var i = 0; i < cali.length; i++) {
+	    	caoli[i].index = i;//获取每次i的值
+	    	//小图片点击事件
+	    	caoli[i].onclick = function(){
+	    		//初始化ol的位置
+	    		caul.style.left= "0px";
+	    		//每次点击移动距离
+	    		caul.style.left=caul.offsetLeft-(speed*this.index)+'px';
+	    		//循环重置小图片背景样式
+	    		for (var i = 0; i < cali.length; i++) {
+	    			caoli[i].className = '';
+	    		}
+	    		//给点击的小图片添加样式
+	    		caoli[this.index].className='active';
+	    	}
+	       //给小图片第一张一个初始样式
+		   caoli[0].className='active';
+     }
+
+	    var speed = 590;	//设置速度
+	    caul.innerHTML += caul.innerHTML;
+	    caul.style.width = cali[0].offsetWidth *cali.length +'px'
+	    
+        
+        //轮播图函数
+	    function change(){
+	    	caul.style.left = caul.offsetLeft - speed +"px";
+	    	// console.log(speed)
+	    	if (caul.offsetLeft < -caul.offsetWidth/2 +590) {
+	    		caul.style.left = "0px";
+	    	}
+	    	else if(caul.offsetWidth > -590){
+                caul.style.left = -caul.offsetWidth/2+"px";
+	    	}
+
+
+	    	 //设置当前图片下标flag（0-8中的一个数）
+		    var flag=caul.offsetLeft/590;
+		    if(flag<0){
+					flag=-flag;
+				}
+		  //调用小图片样式变化函数
+		   go(flag);
+	    }
+
+	    var timer = setInterval(change,1500);
+	    //设置当前图片下标flag（0-8中的一个数）
+	    var flag=caul.offsetLeft/590;
+	    if(flag<0){
+				flag=-flag;
+			}
+		//调用小图片样式变化函数
+		go(flag);
+	  
+	    oplay.onmouseover =function(){
+	    	clearInterval(timer);
+	    }
+
+	   oplay.onmouseout =function(){
+	    	timer = setInterval(change,1500);
+	    }	
+	    //  点击右按钮
+	    nextbtn.onclick = function(){
+           caul.style.left = caul.offsetLeft - speed +"px"; 
+           if (caul.offsetLeft<-caul.offsetWidth/2+590) {
+           	   caul.style.left= '0px';
+           }
+           var flag=caul.offsetLeft/590;
+           if(flag<0){
+				flag=-flag;
+			}
+		   go(flag);
+	    	
+	    }  
+	     //  点击左按钮
+	    prevbtn.onclick =function(){
+	       caul.style.left = caul.offsetLeft + speed +"px"; 
+           if (caul.offsetLeft > 0) {
+           	   caul.style.left= -caul.offsetLeft/2+590+'px';
+           }
+           var flag=caul.offsetLeft/590;
+           if(flag<0){
+				flag=-flag;
+			}
+		   go(flag);
+	    	
+	    }
+	    //右边图片背景样式函数
+	    function go(num){
+	    	for (var i = 0; i < 9; i++) {
+	    		caoli[i].className ='';
+	    	}
+	    	caoli[num].className='active';
+	    }
+}
+	</script> -->
+</head>
+<body>
+	<div id="play" class="play">
+	  <div id="wrap">
+	  	<div id="prev"></div>
+	    <div id="next"></div>
+        <div id="tip">
+			<ul>
+				<a>重生到异世界当魔王1</a>
+				<a>重生到异世界当魔王2</a>
+				<a>重生到异世界当魔王3</a>
+				<a>重生到异世界当魔王4</a>
+				<a>重生到异世界当魔王5</a>
+				<a>重生到异世界当魔王6</a>
+				<a>重生到异世界当魔王7</a>
+				<a>重生到异世界当魔王8</a>
+				<a>重生到异世界当魔王9</a>
+			</ul>
+		</div>
+		<ul class="big" id="big">
+			<li>
+                <a href="javascript:;">
+                    <img src="images/akito.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <img src="images/Berserk.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <img src="images/EVA.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <img src="images/Gintama.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <img src="images/SteinsGate.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <img src="images/SummerWars.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <img src="images/Unicorn.jpg" alt="">
+                </a>
+            </li>
+            <li>
+            	<a href="javascript:;">
+            	<img src="images/sword.jpg" alt="">	
+            	</a>
+            </li>
+            <li>
+            	<a href="javascript:;">
+            		<img src="images/game.jpg" alt="">
+            	</a>
+            </li>			
+		</ul>
+	  </div>
+		<ol id="small">
+	        <li class="active">
+                <img src="images/akito_s.jpg" alt="">
+                <strong>亡国的阿基德</strong>
+                <span>Code Geass</span>
+            </li>
+            <li>
+                <img src="images/Berserk_s.jpg" alt="">
+                <strong>剑风传奇</strong>
+                <span>黄金时代</span>
+            </li>
+            <li>
+                <img src="images/EVA_s.jpg" alt="">
+                <strong>新EVA剧场版</strong>
+                <span>New Evangelion</span>
+            </li>
+            <li>
+                <img src="images/Gintama_s.jpg" alt="">
+                <strong>银魂剧场版</strong>
+                <span>永远的万事屋</span>
+            </li>
+            <li>
+                <img src="images/SteinsGate_s.jpg" alt="">
+                <strong>石头门剧场版</strong>
+                <span>负荷领域的既视感</span>
+            </li>
+            <li>
+                <img src="images/SummerWars_s.jpg" alt="">
+                <strong>夏日大作战</strong>
+                <span>Summer Wars</span>
+            </li>
+            <li>
+                <img src="images/Unicorn_s.jpg" alt="">
+                <strong>高达UC</strong>
+                <span>Gundam Unicorn</span>
+            </li>
+            <li>          	
+            	<img src="images/sword_s.jpg" alt="">
+            	<strong>刀剑神域</strong>
+                <span>整合骑士篇</span>
+            
+            </li>
+            <li>            	
+                <img src="images/game_s.jpg" alt="">
+                <strong>游戏人生</strong>
+                <span>来我们开始游戏吧</span>
+            	
+            </li>			
+		</ol>
+	</div>
+	<script type="text/javascript">
+        var oplay = document.getElementById('play');
+		var owrap = document.getElementById('wrap');
+	    var prevbtn = document.getElementById('prev');
+	    var nextbtn = document.getElementById('next');
+	   
+	    var caol = document.getElementById('small');
+	    var caoli = caol.getElementsByTagName('li');
+
+	    var caul = document.getElementById('big');  
+	    var cali =caul.getElementsByTagName('li');
+	    var tip = document.getElementById('tip');
+	    var tipli = tip.getElementsByTagName('a');
+
+       
+
+	    //右边图片循环点击事件
+	    for (var i = 0; i < cali.length; i++) {
+	    	caoli[i].index = i;//获取每次i的值
+	    	//小图片点击事件
+	    	caoli[i].onclick = function(){
+	    		//初始化ol的位置
+	    		caul.style.left= "0px";
+	    		//每次点击移动距离
+	    		caul.style.left=caul.offsetLeft-(speed*this.index)+'px';
+	    		//循环重置小图片背景样式
+	    		for (var j = 0; j < 9; j++) {
+	    			caoli[j].className = "";
+	    			tipli[j].className='';
+	    			
+	    		}
+	    		//给点击的小图片添加样式
+	    		this.className='active';	
+                tipli[this.index].className='on';
+	    		
+	    	}
+	       //给小图片第一张一个初始样式
+		   caoli[0].className='active';
+
+
+     }
+
+	    var speed = 590;	//设置速度
+	    caul.innerHTML += caul.innerHTML;
+	    caul.style.width = cali[0].offsetWidth *cali.length +'px'
+	    
+        
+        //轮播图函数
+	    function change(){
+	    	caul.style.left = caul.offsetLeft - speed +"px";
+	    	// console.log(speed)
+	    	if (caul.offsetLeft < -caul.offsetWidth/2 +590) {
+	    		caul.style.left = "0px";
+	    	}
+	    	else if(caul.offsetLeft> -590){
+                caul.style.left = -caul.offsetWidth/2+"px";
+	    	}
+
+
+	    	 //设置当前图片下标flag（0-8中的一个数）
+		    var flag=caul.offsetLeft/590;
+		    if(flag<0){
+					flag=-flag;
+				}
+		    tipli[flag].style.display='block';
+		  //调用小图片样式变化函数
+		   go(flag);
+	    }
+
+	    var timer = setInterval(change,1500);
+	    //设置当前图片下标flag（0-8中的一个数）
+	    //var flag=caul.offsetLeft/590;
+	    //if(flag<0){
+		// 		flag=-flag;
+		// 	}
+		// //调用小图片样式变化函数
+		// go(flag);
+	  
+	    oplay.onmouseover =function(){
+	    	clearInterval(timer);
+	    }
+
+	   oplay.onmouseout =function(){
+	    	timer = setInterval(change,1500);
+	    }	
+	    //  点击右按钮
+	    nextbtn.onclick = function(){
+           caul.style.left = caul.offsetLeft - speed +"px"; 
+           if (caul.offsetLeft<-caul.offsetWidth/2+590) {
+           	   caul.style.left= '0px';
+           }
+           var flag=caul.offsetLeft/590;
+           if(flag<0){
+				flag=-flag;
+			}
+		   go(flag);
+	    	
+	    }  
+	     //  点击左按钮
+	    prevbtn.onclick =function(){
+	       caul.style.left = caul.offsetLeft + speed +"px"; 
+           if (caul.offsetLeft >  0) {
+           	   caul.style.left= -caul.offsetWidth/2+590+'px';
+           }
+           var flag=caul.offsetLeft/590;
+           if(flag<0){
+				flag=-flag;
+			}
+		   go(flag);
+	    	
+	    }
+	    //右边图片背景样式函数
+	    function go(num){
+	    	for (var i = 0; i < 9; i++) {
+	    		caoli[i].className ='';
+	    	}
+	    	caoli[num].className='active';
+	    }
+	    function word(num1){
+	    	for (var i = 0; i < 9; i++) {
+	    		caoli[i].className ='';
+	    	}
+	    	tipli[num1].className='on';
+	    }
+
+	</script>
+</body>
+</html>
